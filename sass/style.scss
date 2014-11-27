@@ -48,6 +48,10 @@ header {
 				//border:1px solid lighten($black, 80%);
 				background-color: $blue;
 				color:#fff;
+				@include transition(all 0.3s ease);
+				&:hover {
+					font-size:1rem;
+				}
 			}
 
 		}
@@ -71,6 +75,10 @@ header {
 					.fa {
 						font-weight:bold;
 
+					}
+					@include transition(all 0.3s ease);
+					&:hover {
+						font-size:1rem;
 					}
 				}
 			}
@@ -249,7 +257,7 @@ section {
 			}
 		}
 		p {
-			margin:15px 0 20px;
+			margin:10px 0 20px;
 			font-size: .9rem;
 			color:lighten($black, 55%);
 			line-height: 160%;
@@ -294,7 +302,7 @@ section {
 	}
 }
 .personal {
-	margin:50px 25px 40px;
+	margin:60px 25px 40px;
 	img {
 		display: block;
 		width:100px;
@@ -341,6 +349,11 @@ section {
 		text-decoration: none;
 		font-size:.8rem;
 		background-color: HSL(207, 33%, 57%);
+		@include transition(all 0.3s ease-in);
+		&:hover {
+			background-color: $white;
+			color: $blue;
+		}
 	}
 }
 
