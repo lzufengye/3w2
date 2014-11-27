@@ -1,2 +1,250 @@
 @import "compass/reset";
 @import "compass/css3";
+
+
+$black: #000;
+$white: #fff;
+$blue: HSL(208, 41%, 65%);
+
+$aside: 290px;
+$header: 76px;
+
+
+body {
+	background-color: HSL(36, 28%, 93%);
+	padding-top:$header;
+	font-size: 62.5%;
+	font-family: sans-serif;
+}
+
+header {
+	height: $header;
+	position:fixed;
+	left:0;
+	right:0;
+	top:0;
+	z-index:2;
+	background-color: HSL(36, 100%, 98%);
+	box-shadow: 0 1px 3px #ccc;
+	.link {
+		height:$header;
+		position:absolute;
+		left:0;
+		top:0;
+		.write-btn {
+			width:$header;
+			float:left;
+			height:$header;
+			border-right: 1px solid lighten($black, 90%);
+			a {
+				display: block;
+				margin:15px auto;
+				width:40px;
+				height:40px;
+				line-height: 40px;
+				text-align: center;
+				@include border-radius(50%);
+				border:1px solid lighten($black, 80%);
+				background-color: $blue;
+				color:#fff;
+			}
+
+		}
+		ul {
+			float:left;
+			margin:15px 0;
+			li {
+				float:left;
+				margin:0 10px;
+				font-size: .8rem;
+				a {
+					display: block;
+					width:40px;
+					height:40px;
+					line-height: 40px;
+					text-align: center;
+					@include border-radius(50%);
+					border:1px solid lighten($black, 90%);
+					color:lighten($black, 30%);
+					text-decoration: none;
+					.fa {
+						font-weight:bold;
+
+					}
+				}
+			}
+		}
+	}
+	.logo {
+		width: $header;
+		margin: 0 auto;
+		color:HSL(208, 41%, 65%);
+		line-height: $header;
+		font-size:2rem;
+		a {
+			color:$blue;
+		}
+	}
+	.search {
+		height:$header;
+		position: absolute;
+		right:0;
+		top:0;
+		width:$aside;
+		.frm {
+			margin-top:15px;
+			float:left;
+			position:relative;
+		}
+
+		input[type=text] {
+			@include border-radius(20px);
+			border:1px solid lighten($black, 80%);
+			width:148px;
+			height:40px;
+			line-height: 40px;
+			padding:0 40px 0 10px;
+		}
+		.fa-search {
+			position: absolute;
+			display:block;
+			width:40px;
+			height:40px;
+			text-align: center;
+			line-height: 40px;
+			right:0;
+			top:0;
+			font-size:.8rem;
+		}
+		img {
+			float:right;
+			margin-top:15px;
+			margin-right:30px;
+			width:40px;
+			height:40px;
+			@include border-radius(50%);
+		}
+	}
+}
+section {
+	position:relative;
+	z-index:1;
+	min-width: 1024px;
+}
+.left-box {
+	position:absolute;
+	left:0;
+	top:0;
+	bottom:0;
+	width:$aside;
+	background-color: $blue;
+	color:#fff;
+}
+.right-box {
+	position: absolute;
+	right:0;
+	top:0;
+	bottom:0;
+	width:$aside;
+	background-color: $white;
+}
+.center-box {
+	margin:0 $aside + 40;
+	overflow: hidden;
+}
+
+.info {
+	margin:40px 0;
+	background-color: $white;
+	overflow:hidden;
+	box-shadow: 0 1px 3px #ccc;
+	li {
+		width:25%;
+		float:left;
+		padding:25px 0 15px;
+		text-align: center;
+		border-bottom:5px solid $white;
+		text-transform: Uppercase;
+		&.current {
+			border-color:$blue;
+		}
+		strong {
+			display: block;
+			color:$black;
+			font-size:1rem;
+			line-height: 120%;
+			font-weight: bold;
+		}
+		span {
+			display: block;
+			color:lighten($black, 80%);
+			font-size:.8rem;
+			line-height: 140%;
+		}
+	}
+}
+.msg-list {
+	background-color: $white;
+	box-shadow: 0 1px 3px #ccc;
+	.item {
+		padding:30px 30px 30px 90px;
+		position:relative;
+		border-bottom:1px solid lighten($black, 90%);
+		font-size:1rem;
+		.face {
+			position:absolute;
+			left:30px;
+			width:40px;
+			height:40px;
+			@include border-radius(50%);
+		}
+		.due {
+			float:right;
+			color:lighten($black, 85%);
+			font-size:1rem;
+		}
+		.title {
+
+		}
+		.name {
+			color:lighten($black, 70%);
+			strong {
+				color:$black;
+				font-weight: bold;
+			}
+		}
+		p {
+			margin:15px 0 20px;
+			font-size: .8rem;
+			color:lighten($black, 40%);
+			line-height: 160%;
+		}
+		.bar {
+			overflow: hidden;
+			ul {
+				float:left;
+			}
+			
+			li {
+				float:left;
+				margin-right:20px;
+
+				a {
+					color:lighten($black, 60%);
+				}
+			}
+		}
+		.fa-omit {
+			margin-top:-35px;
+			&::before {
+				content: "…";
+				font-size:1.6rem;
+
+			}
+		}
+		.drop {
+			float:right;
+			color:lighten($black,80%);
+		}
+	}
+}
