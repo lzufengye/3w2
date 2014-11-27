@@ -49,8 +49,9 @@ header {
 				background-color: $blue;
 				color:#fff;
 				@include transition(all 0.3s ease);
+				font-size:1rem;
 				&:hover {
-					font-size:1rem;
+					font-size:1.2rem;
 				}
 			}
 
@@ -429,7 +430,7 @@ header {
 		}
 		strong {
 			color:lighten($black, 50%);
-			font-weight: bold;
+			//font-weight: bold;
 		}
 		span {
 			color:lighten($black, 70%);
