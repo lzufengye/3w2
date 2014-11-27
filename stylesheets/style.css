@@ -221,7 +221,7 @@ header .search img {
 }
 
 /* line 141, ../sass/style.scss */
-section {
+.main {
   position: relative;
   z-index: 1;
   min-width: 640px;
