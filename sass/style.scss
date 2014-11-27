@@ -8,6 +8,7 @@ $blue: HSL(208, 41%, 65%);
 
 $aside: 290px;
 $header: 76px;
+$headerLi: 40px;
 
 
 body {
@@ -38,10 +39,10 @@ header {
 			border-right: 1px solid lighten($black, 90%);
 			a {
 				display: block;
-				margin:15px auto;
-				width:40px;
-				height:40px;
-				line-height: 40px;
+				margin:($header - $headerLi) / 2 auto;
+				width:$headerLi;
+				height:$headerLi;
+				line-height: $headerLi;
 				text-align: center;
 				@include border-radius(50%);
 				//border:1px solid lighten($black, 80%);
@@ -52,16 +53,16 @@ header {
 		}
 		ul {
 			float:left;
-			margin:15px 0;
+			margin:($header - $headerLi) / 2 0;
 			li {
 				float:left;
 				margin-left:20px;
 				font-size: .8rem;
 				a {
 					display: block;
-					width:40px;
-					height:40px;
-					line-height: 40px;
+					width:$headerLi;
+					height:$headerLi;
+					line-height: $headerLi;
 					text-align: center;
 					@include border-radius(50%);
 					border:1px solid lighten($black, 90%);
@@ -101,30 +102,30 @@ header {
 			@include border-radius(20px);
 			border:1px solid lighten($black, 85%);
 			width:148px;
-			height:40px;
-			line-height: 40px;
-			padding:0 40px 0 15px;
+			height:$headerLi;
+			line-height: $headerLi;
+			padding:0 $headerLi 0 15px;
 			font-size:.8rem;
 			outline: none;
 		}
 		.fa-search {
 			position: absolute;
 			display:block;
-			width:40px;
-			height:40px;
+			width:$headerLi;
+			height:$headerLi;
 			text-align: center;
-			line-height: 40px;
-			right:0;
+			line-height: $headerLi;
+			right:5px;
 			top:0;
 			font-size:1.2rem;
-			color:lighten($black, 40%);
+			color:lighten($black, 60%);
 		}
 		img {
 			float:right;
-			margin-top:15px;
+			margin-top:($header - $headerLi) / 2;
 			margin-right:30px;
-			width:40px;
-			height:40px;
+			width:$headerLi;
+			height:$headerLi;
 			@include border-radius(50%);
 		}
 	}
@@ -132,8 +133,10 @@ header {
 section {
 	position:relative;
 	z-index:1;
-	min-width: 1024px;
+	min-width:640px;
 }
+
+
 .left-box {
 	position:absolute;
 	left:0;
@@ -151,7 +154,7 @@ section {
 	width:$aside;
 	background-color: $white;
 	.box {
-		margin:40px 40px 0 30px;
+		margin:$headerLi $headerLi 0 30px;
 		h3 {
 			font-size:1rem;
 			color:lighten($black, 50%);
@@ -170,12 +173,12 @@ section {
 	}
 }
 .center-box {
-	margin:0 $aside + 40;
+	margin:0 $aside + $headerLi;
 	overflow: hidden;
 }
 
 .info {
-	margin:40px 0;
+	margin:$headerLi 0;
 	background-color: $white;
 	overflow:hidden;
 	box-shadow: 0 1px 3px #eee;
@@ -219,8 +222,8 @@ section {
 		.face {
 			position:absolute;
 			left:30px;
-			width:40px;
-			height:40px;
+			width:$headerLi;
+			height:$headerLi;
 			@include border-radius(50%);
 		}
 		.due {
@@ -349,6 +352,10 @@ section {
 		img {
 			display:block;
 			max-width: 100%;
+			@include transition(transform 0.3s ease);
+			&:hover {
+				@include transform(scale(1.1));
+			}
 		}
 	}
 }
@@ -394,8 +401,8 @@ section {
 			position:absolute;
 			left:0;
 			top:10px;
-			width:40px;
-			height:40px;
+			width:$headerLi;
+			height:$headerLi;
 			@include border-radius(50%);
 		}
 		strong,span {
@@ -425,5 +432,34 @@ section {
 			text-align: center;
 			color:lighten($black, 60%);
 		}
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.info {
+		li {
+			float:none;
+			width:100%;
+		}
+	}
+}
+@media screen and (max-width: 960px) {
+	.left-box {
+		display:none;
+	}
+	.center-box {
+		margin-left:0;
+	}
+}
+@media screen and (max-width: 640px) {
+	.left-box {
+		display:none;
+	}
+	.right-box {
+		display:none;
+	}
+	.center-box {
+		margin-left:0;
+		margin-right:0;
 	}
 }
