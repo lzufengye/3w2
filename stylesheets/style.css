@@ -538,27 +538,30 @@ header .search img {
 .menu ul li a {
   margin-left: 5px;
   color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid #e6e6e6;
 }
 
-/* line 400, ../sass/style.scss */
+/* line 402, ../sass/style.scss */
 .trend-list li {
   margin: 10px 0;
   font-size: 1rem;
   white-space: nowrap;
-  text-overflow: hidden;
+  text-overflow: ellipsis;
   overflow: hidden;
+  color: HSL(208, 41%, 65%);
 }
-/* line 406, ../sass/style.scss */
+/* line 409, ../sass/style.scss */
 .trend-list li a {
   color: HSL(208, 41%, 65%);
 }
 
-/* line 412, ../sass/style.scss */
+/* line 415, ../sass/style.scss */
 .user-list li {
   position: relative;
   padding: 10px 30px 10px 50px;
 }
-/* line 415, ../sass/style.scss */
+/* line 418, ../sass/style.scss */
 .user-list li img {
   position: absolute;
   left: 0;
@@ -569,24 +572,24 @@ header .search img {
   -webkit-border-radius: 50%;
   border-radius: 50%;
 }
-/* line 423, ../sass/style.scss */
+/* line 426, ../sass/style.scss */
 .user-list li strong, .user-list li span {
   display: block;
-  text-overflow: hidden;
+  text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   line-height: 140%;
   font-size: .8rem;
 }
-/* line 431, ../sass/style.scss */
+/* line 434, ../sass/style.scss */
 .user-list li strong {
   color: gray;
 }
-/* line 435, ../sass/style.scss */
+/* line 438, ../sass/style.scss */
 .user-list li span {
   color: #b3b3b3;
 }
-/* line 438, ../sass/style.scss */
+/* line 441, ../sass/style.scss */
 .user-list li .follow-btn {
   position: absolute;
   right: 0;
@@ -601,35 +604,35 @@ header .search img {
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 455, ../sass/style.scss */
+  /* line 458, ../sass/style.scss */
   .info li {
     float: none;
     width: 100%;
   }
 }
 @media screen and (max-width: 960px) {
-  /* line 462, ../sass/style.scss */
+  /* line 465, ../sass/style.scss */
   .left-box {
     display: none;
   }
 
-  /* line 465, ../sass/style.scss */
+  /* line 468, ../sass/style.scss */
   .center-box {
     margin-left: 0;
   }
 }
 @media screen and (max-width: 640px) {
-  /* line 470, ../sass/style.scss */
+  /* line 473, ../sass/style.scss */
   .left-box {
     display: none;
   }
 
-  /* line 473, ../sass/style.scss */
+  /* line 476, ../sass/style.scss */
   .right-box {
     display: none;
   }
 
-  /* line 476, ../sass/style.scss */
+  /* line 479, ../sass/style.scss */
   .center-box {
     margin-left: 0;
     margin-right: 0;

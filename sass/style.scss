@@ -392,6 +392,8 @@ header {
 			a {
 				margin-left:5px;
 				color:$white;
+				text-decoration: none;
+				border-bottom:1px solid darken($white, 10%);
 			}
 		}
 	}
@@ -401,8 +403,9 @@ header {
 		margin:10px 0;
 		font-size:1rem;
 		white-space: nowrap;
-		text-overflow:hidden;
+		text-overflow: ellipsis;
 		overflow: hidden;
+		color: $blue;
 		a {
 			color:$blue;
 		}
@@ -422,7 +425,7 @@ header {
 		}
 		strong,span {
 			display: block;
-			text-overflow:hidden;
+			text-overflow:ellipsis;
 			white-space: nowrap;
 			overflow: hidden;
 			line-height:140%;
