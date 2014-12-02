@@ -225,7 +225,6 @@ header .search img {
 .main {
   position: relative;
   z-index: 1;
-  min-width: 640px;
 }
 
 /* line 149, ../sass/style.scss */
@@ -636,5 +635,15 @@ header .search img {
   .center-box {
     margin-left: 0;
     margin-right: 0;
+  }
+
+  /* line 483, ../sass/style.scss */
+  .search {
+    display: none;
+  }
+
+  /* line 486, ../sass/style.scss */
+  .link ul {
+    display: none;
   }
 }

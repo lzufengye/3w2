@@ -142,7 +142,7 @@ header {
 .main {
 	position:relative;
 	z-index:1;
-	min-width:640px;
+	//min-width:640px;
 }
 
 
@@ -479,5 +479,11 @@ header {
 	.center-box {
 		margin-left:0;
 		margin-right:0;
+	}
+	.search {
+		display:none;
+	}
+	.link ul {
+		display: none;
 	}
 }
