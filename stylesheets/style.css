@@ -602,48 +602,67 @@ header .search img {
   color: #999999;
 }
 
-@media screen and (max-width: 1024px) {
-  /* line 458, ../sass/style.scss */
+@media screen and (max-width: 960px) {
+  /* line 465, ../sass/style.scss */
+  .right-box {
+    left: 0;
+    right: auto;
+    top: 950px;
+  }
+  /* line 470, ../sass/style.scss */
+  .right-box section:first-child {
+    display: none;
+  }
+
+  /* line 474, ../sass/style.scss */
+  .center-box {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 720px) {
+  /* line 481, ../sass/style.scss */
   .info li {
     float: none;
     width: 100%;
   }
 }
-@media screen and (max-width: 960px) {
-  /* line 465, ../sass/style.scss */
-  .left-box {
-    display: none;
-  }
-
-  /* line 468, ../sass/style.scss */
-  .center-box {
-    margin-left: 0;
-  }
-}
 @media screen and (max-width: 640px) {
-  /* line 473, ../sass/style.scss */
+  /* line 488, ../sass/style.scss */
   .left-box {
     display: none;
   }
 
-  /* line 476, ../sass/style.scss */
+  /* line 491, ../sass/style.scss */
   .right-box {
     display: none;
   }
 
-  /* line 479, ../sass/style.scss */
+  /* line 494, ../sass/style.scss */
   .center-box {
     margin-left: 0;
     margin-right: 0;
   }
 
-  /* line 483, ../sass/style.scss */
-  .search {
+  /* line 499, ../sass/style.scss */
+  .frm {
     display: none;
   }
 
-  /* line 486, ../sass/style.scss */
+  /* line 502, ../sass/style.scss */
   .link ul {
     display: none;
+  }
+
+  /* line 506, ../sass/style.scss */
+  .info li {
+    float: left;
+    width: 25%;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 514, ../sass/style.scss */
+  .info li {
+    float: none;
+    width: 100%;
   }
 }

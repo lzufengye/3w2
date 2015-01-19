@@ -456,17 +456,32 @@ header {
 @media screen and (max-width: 1024px) {
 	.info {
 		li {
-			float:none;
-			width:100%;
+			//float:none;
+			//width:100%;
 		}
 	}
 }
 @media screen and (max-width: 960px) {
-	.left-box {
-		display:none;
+	.right-box {
+		//display:none;
+		left:0;
+		right:auto;
+		top:950px;
+		section:first-child {
+			display: none;
+		}
 	}
 	.center-box {
-		margin-left:0;
+		margin-right:0;
+	}
+}
+
+@media screen and (max-width: 720px) {
+	.info {
+		li {
+			float:none;
+			width:100%;
+		}
 	}
 }
 @media screen and (max-width: 640px) {
@@ -480,10 +495,25 @@ header {
 		margin-left:0;
 		margin-right:0;
 	}
-	.search {
+
+	.frm {
 		display:none;
 	}
 	.link ul {
 		display: none;
+	}
+	.info {
+		li {
+			float:left;
+			width:25%;
+		}
+	}
+}
+@media screen and (max-width: 480px) {
+	.info {
+		li {
+			float:none;
+			width:100%;
+		}
 	}
 }
