@@ -1,0 +1,6 @@
+/* line 3, ../sass/a.scss */
+.a {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
