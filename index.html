@@ -11,6 +11,7 @@
   <script src="javascripts/jquery-1.11.3.min.js"></script>
   <script src="javascripts/handlebars-v3.0.3.js"></script>
   <script src="javascripts/compile-template.js"></script>
+  <script src="javascripts/handle-post.js"></script>
 </head>
 <body>
 <header>
@@ -76,7 +77,30 @@
       <li><span>followers</span><strong>1m</strong></li>
     </ul>
 
-    <ul class="msg-list">
+    <ul id="new-post-container" class="msg-list">
+      <li class="item">
+        <img src="images/face2.jpg" alt="" class="face">
+
+        <div class="cont">
+          <div class="title">
+            <div class="name">
+              <strong>Kerem</strong>@kerem.com
+            </div>
+          </div>
+
+          <div class="input-box">
+            <textarea rows="4">
+            </textarea>
+          </div>
+
+          <div class="bar">
+            <a href="" class="submit"><i class="fa fa-share"></i></a>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <ul id="posts-container" class="msg-list">
       <script id="post-template" type="text/x-handlebars-template">
         <li class="item">
           <img src="images/face2.jpg" alt="" class="face">
