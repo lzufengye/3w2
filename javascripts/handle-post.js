@@ -1,5 +1,5 @@
 $(function() {
-  $(".submit").click(function(e) {
+  $(".submit").on("click", function(e) {
     e.preventDefault();
 
     var content = $("textarea").val();
@@ -7,7 +7,10 @@ $(function() {
     newPost('Kerem', content);
   });
 
-
+  $("#posts-container").on("click", ".drop", function(e) {
+    console.log(this);
+    $(this).parents(".item").hide();
+  });
 });
 
 function newPost(author, content) {

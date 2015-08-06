@@ -3,6 +3,10 @@ $(function() {
   window.template = Handlebars.compile(source);
 
   fetchPosts();
+
+  $(".fa-times").click(function(e) {
+    console.log(this);
+  });
 });
 
 function fetchPosts() {
@@ -18,4 +22,3 @@ function renderPosts() {
     $("#posts-container").append(html);
   });
 }
-
